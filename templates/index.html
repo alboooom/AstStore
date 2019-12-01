@@ -30,17 +30,17 @@
 							<nav class="main_nav">
 								<ul>
 									<li class="hassubs active">
-										<a href="index.html">Home</a>
+										<a href="index.html">Главная</a>
 										<ul>
-											<li><a href="categories.html">Categories</a></li>
-											<li><a href="product.html">Product</a></li>
-											<li><a href="cart.html">Cart</a></li>
+											<li><a href="categories.html">Категории</a></li>
+											<li><a href="product.html">Товары</a></li>
+											<li><a href="cart.html">Корзина</a></li>
 											<li><a href="checkout.html">Check out</a></li>
-											<li><a href="contact.html">Contact</a></li>
+											<li><a href="contact.html">Контакты</a></li>
 										</ul>
 									</li>
 									<li class="hassubs">
-										<a href="categories.html">Categories</a>
+										<a href="categories.html">Категории</a>
 										<ul>
 
                                             {% for category in categories %}
@@ -49,7 +49,7 @@
 										</ul>
 									</li>
                                     <li class="hassubs">
-									    <a href="#">Accessories</a>
+									    <a href="#">Аксессуары</a>
                                         <ul>
                                             {% for accessory in accessories %}
 											        <li><a href={{accessory['url']}}><center>{{accessory['name']}}</center></a></li>
@@ -57,7 +57,7 @@
 										</ul>
                                     </li>
 									<li><a href="#">Offers</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="contact.html">Контакты</a></li>
 								</ul>
 							</nav>
 							<div class="header_extra ml-auto">
@@ -73,7 +73,7 @@
 													c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C412.8,445.2,392.1,462,366.8,462z"/>
 											</g>
 										</svg>
-										<div>Cart <span>(0)</span></div>
+										<div>Корзина <span>(0)</span></div>
 									</a>
 								</div>
 								<div class="search">
@@ -144,13 +144,13 @@
 				</div>
 				<ul class="page_menu_nav menu_mm">
 					<li class="page_menu_item has-children menu_mm">
-						<a href="index.html">Home<i class="fa fa-angle-down"></i></a>
+						<a href="index.html">Главная<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
-							<li class="page_menu_item menu_mm"><a href="categories.html">Categories<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="product.html">Product<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="cart.html">Cart<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.html">Категории<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="product.html">Товары<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="cart.html">Корзина<i class="fa fa-angle-down"></i></a></li>
 							<li class="page_menu_item menu_mm"><a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="contact.html">Контакты<i class="fa fa-angle-down"></i></a></li>
 						</ul>
 					</li>
 					<li class="page_menu_item has-children menu_mm">
@@ -171,16 +171,16 @@
 
 		<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 
-		<div class="menu_social">
-			<ul>
-				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
+{#		<div class="menu_social">#}
+{#			<ul>#}
+{#				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>#}
+{#				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>#}
+{#				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>#}
+{#				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>#}
+{#			</ul>#}
+{#		</div>#}
 	</div>
-	
+
 	<!-- Home -->
 
 	<div class="home">
