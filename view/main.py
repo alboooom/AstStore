@@ -5,7 +5,7 @@ def view():
     data = {
     "categories" : select("SELECT  name , url  FROM category"),
     "accessories" : select("SELECT name, url FROM accessories"),
-    "sliders" : select("SELECT name, image, description,  url FROM sliders")
+    "sliders" : select("SELECT name, image, description,  url, button FROM sliders")
     }
     return render_template("index.html", ds = data)
 
