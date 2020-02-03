@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sublime</title>
+<title>AstStore</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Sublime project">
@@ -17,7 +17,6 @@
 <body>
 
 <div class="super_container">
-
 	<!-- Header -->
 
 	<header class="header">
@@ -26,21 +25,21 @@
 				<div class="row">
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
-							<div class="logo"><a href="index.html">AstStore. </a></div>
+							<div class="logo"><a href="/">AstStore. </a></div>
 							<nav class="main_nav">
 								<ul>
 									<li class="hassubs active">
-										<a href="index.html">Главная</a>
+										<a href="/">Главная</a>
 										<ul>
-											<li><a href="categories.html">Категории</a></li>
-											<li><a href="product.html">Товары</a></li>
+											<li><a href="categories">Категории</a></li>
+											<li><a href="products">Товары</a></li>
 											<li><a href="cart.html">Корзина</a></li>
 											<li><a href="checkout.html">Check out</a></li>
 											<li><a href="contact.html">Контакты</a></li>
 										</ul>
 									</li>
 									<li class="hassubs">
-										<a href="categories.html">Категории</a>
+										<a href="categories">Категории</a>
 										<ul>
 
                                             {% for category in ds.categories %}
@@ -242,93 +241,93 @@
 	<!-- Products -->
 
 	<div class="products">
-{#		<div class="container">#}
-{#			<div class="row">#}
-{#				<div class="col">#}
-{##}
-{#					<div class="product_grid">#}
-{##}
-{#						<!-- Product -->#}
-{#						<div class="product">#}
-{#							<div class="product_image"><img src="../static/images/product_1.jpg" alt=""></div>#}
-{#							<div class="product_extra product_new"><a href="categories.html">New</a></div>#}
-{#							<div class="product_content">#}
-{#								<div class="product_title"><a href="product.html">Smart Phone</a></div>#}
-{#								<div class="product_price">$670</div>#}
-{#							</div>#}
-{#						</div>#}
-{##}
-{#						<!-- Product -->#}
-{#						<div class="product">#}
-{#							<div class="product_image"><img src="../static/images/product_2.jpg" alt=""></div>#}
-{#							<div class="product_extra product_sale"><a href="categories.html">Sale</a></div>#}
-{#							<div class="product_content">#}
-{#								<div class="product_title"><a href="product.html">Smart Phone</a></div>#}
-{#								<div class="product_price">$670</div>#}
-{#							</div>#}
-{#						</div>#}
-{##}
-{#						<!-- Product -->#}
-{#						<div class="product">#}
-{#							<div class="product_image"><img src="../static/images/product_3.jpg" alt=""></div>#}
-{#							<div class="product_content">#}
-{#								<div class="product_title"><a href="product.html">Smart Phone</a></div>#}
-{#								<div class="product_price">$670</div>#}
-{#							</div>#}
-{#						</div>#}
-{##}
-{#						<!-- Product -->#}
-{#						<div class="product">#}
-{#							<div class="product_image"><img src="../static/images/product_4.jpg" alt=""></div>#}
-{#							<div class="product_content">#}
-{#								<div class="product_title"><a href="product.html">Smart Phone</a></div>#}
-{#								<div class="product_price">$670</div>#}
-{#							</div>#}
-{#						</div>#}
-{##}
-{#						<!-- Product -->#}
-{#						<div class="product">#}
-{#							<div class="product_image"><img src="../static/images/product_5.jpg" alt=""></div>#}
-{#							<div class="product_content">#}
-{#								<div class="product_title"><a href="product.html">Smart Phone</a></div>#}
-{#								<div class="product_price">$670</div>#}
-{#							</div>#}
-{#						</div>#}
-{##}
-{#						<!-- Product -->#}
-{#						<div class="product">#}
-{#							<div class="product_image"><img src="../static/images/product_6.jpg" alt=""></div>#}
-{#							<div class="product_extra product_hot"><a href="categories.html">Hot</a></div>#}
-{#							<div class="product_content">#}
-{#								<div class="product_title"><a href="product.html">Smart Phone</a></div>#}
-{#								<div class="product_price">$670</div>#}
-{#							</div>#}
-{#						</div>#}
-{##}
-{#						<!-- Product -->#}
-{#						<div class="product">#}
-{#							<div class="product_image"><img src="../static/images/product_7.jpg" alt=""></div>#}
-{#							<div class="product_content">#}
-{#								<div class="product_title"><a href="product.html">Smart Phone</a></div>#}
-{#								<div class="product_price">$670</div>#}
-{#							</div>#}
-{#						</div>#}
-{##}
-{#						<!-- Product -->#}
-{#						<div class="product">#}
-{#							<div class="product_image"><img src="../static/images/product_8.jpg" alt=""></div>#}
-{#							<div class="product_extra product_sale"><a href="categories.html">Hot</a></div>#}
-{#							<div class="product_content">#}
-{#								<div class="product_title"><a href="product.html">Smart Phone</a></div>#}
-{#								<div class="product_price">$670</div>#}
-{#							</div>#}
-{#						</div>#}
-{##}
-{#					</div>#}
-{##}
-{#				</div>#}
-{#			</div>#}
-{#		</div>#}
+		<div class="container">
+			<div class="row">
+				<div class="col">
+
+					<div class="product_grid">
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="../static/images/product_1.jpg" alt=""></div>
+							<div class="product_extra product_new"><a href="categories.html">New</a></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product.html">Smart Phone</a></div>
+								<div class="product_price">$670</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="../static/images/product_2.jpg" alt=""></div>
+							<div class="product_extra product_sale"><a href="categories.html">Sale</a></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product.html">Smart Phone</a></div>
+								<div class="product_price">$670</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="../static/images/product_3.jpg" alt=""></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product.html">Smart Phone</a></div>
+								<div class="product_price">$670</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="../static/images/product_4.jpg" alt=""></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product.html">Smart Phone</a></div>
+								<div class="product_price">$670</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="../static/images/product_5.jpg" alt=""></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product.html">Smart Phone</a></div>
+								<div class="product_price">$670</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="../static/images/product_6.jpg" alt=""></div>
+							<div class="product_extra product_hot"><a href="categories.html">Hot</a></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product.html">Smart Phone</a></div>
+								<div class="product_price">$670</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="../static/images/product_7.jpg" alt=""></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product.html">Smart Phone</a></div>
+								<div class="product_price">$670</div>
+							</div>
+						</div>
+
+						<!-- Product -->
+						<div class="product">
+							<div class="product_image"><img src="../static/images/product_8.jpg" alt=""></div>
+							<div class="product_extra product_sale"><a href="categories.html">Hot</a></div>
+							<div class="product_content">
+								<div class="product_title"><a href="product.html">Smart Phone</a></div>
+								<div class="product_price">$670</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Ad -->
@@ -341,7 +340,7 @@
 						<div class="avds_xl_background" style="background-image:url(../static/images/avds_xl.jpg)"></div>
 						<div class="avds_xl_content">
 							<div class="avds_title">Amazing Devices</div>
-							<div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus.</div>
+							<div class="avds_text">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus.</div>
 							<div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>
 						</div>
 					</div>
@@ -407,14 +406,20 @@
 						<div class="copyright ml-auto mr-auto"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-						<div class="footer_social ml-lg-auto">
-							<ul>
-								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
+                        <div class="footer_social ml-lg-auto">
+
+                            <ul>         {% for messenger in ds.messengers %}
+                                {% if messenger.name == 'instagram' %}
+                                    <li><a href={{ messenger.url }}><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                {% endif %}
+                                {% if messenger.name == 'facebook' %}
+                                    <li><a href={{ messenger.url }}><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                {% endif %}
+                                {#								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>#}
+                            {% endfor %}
+                            </ul>
+
+                        </div>
 					</div>
 				</div>
 			</div>

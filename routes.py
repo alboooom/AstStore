@@ -1,37 +1,47 @@
-from flask import Flask, render_template, redirect, url_for
-from view import main, category
+from flask import Flask, render_template, redirect, url_for, request, sessions
+
+from login import LogMain
+from view import main, category, products
 import psycopg2
 app = Flask(__name__)
+l = LogMain()
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def loginwindow():
+    return l.loginwindow()
+
+
 @app.route('/')
-def home():
+def Cmain():
     return main.view()
 
 
-@app.route('/categories.html')
-def categories():
+@app.route('/categories')
+def Ccategory():
     return category.view()
 
 
-@app.route('/index.html')
-def back_home():
-    return main.view()
+# @app.route('/cart.html')
+# def Ccart():
+#     return render_template('cart.html')
 
 
-@app.route('/cart.html')
-def cart():
-    return render_template('cart.html')
+@app.route('/products')
+def Cproducts():
+    return products.allview()
 
 
-@app.route('/product.html')
-def product():
-    return render_template('product.html')
+@app.route('/products/product')
+def Cproduct():
+    return products.oneview()
 
 
 @app.route('/contact.html')
-def contact():
-    return render_template('contact.html')
+def Ccontact():
+    return render_template('product.html')
 
 
 @app.route('/checkout.html')
-def checkout():
+def Ccheckout():
     return render_template('checkout.html')

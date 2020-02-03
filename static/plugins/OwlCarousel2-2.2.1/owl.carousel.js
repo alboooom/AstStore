@@ -538,7 +538,7 @@
 	};
 
 	/**
-	 * Updates option logic if necessery.
+	 * Updates option db_api if necessery.
 	 * @protected
 	 */
 	Owl.prototype.optionsLogic = function() {

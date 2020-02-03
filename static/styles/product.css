@@ -875,7 +875,7 @@ section
 }
 .details_row
 {
-	margin-top: 95px;
+	margin-top: 200px;
 }
 .details_image
 {
@@ -883,7 +883,9 @@ section
 }
 .details_image_large
 {
-	width: 100%;
+	width: 400px;
+	height: 450px;
+
 }
 .details_image_large img
 {
@@ -926,7 +928,7 @@ section
 }
 .details_image_thumbnail img
 {
-	max-width: 100%;
+	max-width: 90%;
 }
 .product_name
 {
@@ -987,6 +989,7 @@ section
 }
 .details_text
 {
+	white-space: pre-line;
 	margin-top: 49px;
 }
 .details_text p

@@ -26,13 +26,13 @@
 				<div class="row">
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
-							<div class="logo"><a href="index.html">AstStore.</a></div>
+							<div class="logo"><a href="/">AstStore.</a></div>
 							<nav class="main_nav">
 								<ul>
 									<li class="hassubs active">
-										<a href="index.html">Главная</a>
+										<a href="/">Главная</a>
 										<ul>
-											<li><a href="categories.html">Категории</a></li>
+											<li><a href="categories">Категории</a></li>
 											<li><a href="product.html">Товары</a></li>
 											<li><a href="cart.html">Корзина</a></li>
 											<li><a href="checkout.html">Check out</a></li>
@@ -40,10 +40,10 @@
 										</ul>
 									</li>
 									<li class="hassubs">
-										<a href="categories.html">Категории</a>
+										<a href="categories">Категории</a>
 										<ul>
 
-                                            {% for category in categories %}
+                                            {% for category in ds.categories %}
 											        <li><a href={{category['url']}}><center>{{category.name}}</center></a></li>
                                             {% endfor %}
 										</ul>
@@ -51,7 +51,7 @@
                                     <li class="hassubs">
 									    <a href="#">Аксессуары</a>
                                         <ul>
-                                            {% for accessory in accessories %}
+                                            {% for accessory in ds.accessories %}
 											        <li><a href={{accessory['url']}}><center>{{accessory['name']}}</center></a></li>
                                             {% endfor %}
 										</ul>
@@ -119,15 +119,6 @@
 			</div>
 		</div>
 
-		<!-- Social -->
-		<div class="header_social">
-			<ul>
-				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
 	</header>
 
 	<!-- Menu -->
@@ -168,18 +159,26 @@
 			</div>
 		</div>
 
-		<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-
-{#		<div class="menu_social">#}
-{#			<ul>#}
-{#				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>#}
-{#				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>#}
-{#				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>#}
-{#				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>#}
-{#			</ul>#}
-{#		</div>#}
 	</div>
+	<!-- Home -->
 
+	<div class="home">
+		<div class="home_container">
+			<div class="home_background" style="background-image:url(../static/images/category.jpg)"></div>
+			<div class="home_content_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="home_content">
+								<div class="home_title">Smart Phones<span>.</span></div>
+								<div class="home_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Products -->
 
 	<div class="products">
@@ -212,7 +211,7 @@
 				<div class="col">
 					
 					<div class="product_grid">
-                    {% for category in categories %}
+                    {% for category in ds.categories %}
 						<!-- Product -->
 						<div class="product">
 							<div class="product_image"><img src={{category['pictures'] }} alt={{category['name']}} width="300" height="200" > </div>
@@ -291,10 +290,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 						<div class="footer_social ml-lg-auto">
 							<ul>
-								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                {% for messenger in ds.messengers %}
+                                    {% if messenger.name == 'instagram' %}
+                                        <li><a href={{ messenger.url }}><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    {% endif %}
+                                    {% if messenger.name == 'facebook' %}
+                                        <li><a href={{ messenger.url }}><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    {% endif %}
+                                {#								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>#}
+                                {% endfor %}
 							</ul>
 						</div>
 					</div>
